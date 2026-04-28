@@ -4,8 +4,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
 }
-
 .homepage {
     background-image: url("images/mtnzzz.jpg");
     height: 100vh;
@@ -134,13 +134,12 @@ nav a:hover {
     align-items: center;
 }
 
-.bioText{
+.bioText {
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     letter-spacing: 0.1em;
     padding: 10px 50px 0px 0px;
-
 }
 
 #profile{
@@ -151,18 +150,20 @@ nav a:hover {
 
 .links a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .links {
     display: flex;
     justify-content: center;
-    padding: 10px 0 50px 0;
-    
+    padding: 15px 30px;
+    background-color: black;
+    border-radius: 30px;
+    width: fit-content;
+    margin: 30px auto;
 }
-
 .links ul {
     display: flex;
     list-style: none;
@@ -174,29 +175,114 @@ nav a:hover {
 .links li + li::before {
     content: ' | ';
     padding: 0 15px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: rgb(255, 255, 255);
 }
-
-
 
 .links a:hover {
     color: orange;
 }
 
+
+
+/*==============================================================================*/
+
+.photoStrip {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 3vw 0;
+    box-sizing: border-box;
+}
+
+.photoTrack {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.photoSlide {
+    width: 40vw;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    flex-shrink: 0;
+    align-self: center;
+    margin: 0 0.5vw;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.photoTitle{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.photography {
+    padding: 0px 0px 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.photographyInner {
+    border-top: 2px solid black;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.photoTitle {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.photoText {
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    max-width: 90vw;
+}
+
+.linkP {
+    display: block;
+    padding: 15px 20px;
+    background-color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin: 30px auto;
+    width: fit-content;
+}
+.linkP:hover{
+    color: orange;
+}
 /*==============================================================================*/
 footer {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 20px 20px 20px 30px;
     z-index: 2;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 footer a {
@@ -216,4 +302,43 @@ footer a:hover{
 }
 #subtext{
     font-size: 2vh;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #profile {
+        width: 50vw;
+        margin: 20px auto;
+    }
+
+    .bioText {
+        padding: 10px 0px 0px 0px;
+        text-align: left;
+    }
+
+    footer a {
+        font-size: 6vw;
+        margin-right: 2vw;
+    }
+
+    #name {
+        font-size: 2vw;
+    }
+
+    #subtext {
+        font-size: 1.5vw;
+    }
 }
