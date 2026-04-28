@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .homepage {
@@ -11,6 +15,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.homepage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 0;
 }
 
@@ -20,7 +31,9 @@ header {
     font-size: clamp(2rem, 4vw, 3.5rem);
     color: white;
     letter-spacing: 0.2em;
-    margin-bottom: 62vh;
+    margin-top: 25vh;
+    position: relative;
+    z-index: 1;
 }
 
 #downArrow {
@@ -29,18 +42,150 @@ header {
     left: 50%;
     transform: translateX(-50%);
     width: 70px;
+    z-index: 1;
 }
 
 .panel {
     position: relative;
-    z-index: 1;
     margin-top: 100vh;
     min-height: 100vh;
     background: white;
 }
 
+.mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    align-items: center;
+    background: rgba(0, 0, 0, 0); /* start transparent */
+    transition: background 0.1s linear;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+.navName {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-right: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
 /*==============================================================================*/
 
+.navigation{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navN{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    margin-right: auto;
+}
+
+
+/*==============================================================================*/
+
+
+.info {
+    display: flex;
+    padding-top: 60px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.bioText{
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 10px 50px 0px 0px;
+
+}
+
+#profile{
+    margin: 25px;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 50px 0;
+    
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.links li + li::before {
+    content: ' | ';
+    padding: 0 15px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+
+
+.links a:hover {
+    color: orange;
+}
+
+/*==============================================================================*/
 footer {
     background-color: black;
     color: white;
@@ -51,11 +196,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 footer a {
     color: white;
-    font-size: 2.5rem;
+    font-size: 50px;
     margin: 0 10px;
     text-decoration: none;
     margin-right: 1vw;
