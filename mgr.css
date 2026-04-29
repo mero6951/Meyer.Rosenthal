@@ -3,7 +3,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow-y: scroll;
 }
 .homepage {
@@ -50,6 +49,8 @@ header {
     margin-top: 100vh;
     min-height: 100vh;
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .mainNav {
@@ -283,6 +284,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: auto; 
 }
 
 footer a {
