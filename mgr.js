@@ -15,7 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const vh = window.innerHeight;
         const panelTop = panel.getBoundingClientRect().top;
 
-        downArrow.style.opacity = Math.max(0, 1 - scrollY / vh);
+        const arrowOpacity = Math.max(0, 1 - scrollY / (vh * 0.3));
+        const arrowBottom = 3 - (scrollY / vh) * 20;
+        downArrow.style.transform = `translateX(-50%) translateY(-${scrollY}px)`;
+        downArrow.style.opacity = arrowOpacity;
 
         const fadeEnd = vh - navHeight;
         const fadeStart = fadeEnd * 0.7;
@@ -68,4 +71,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, { passive: false });
 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+const overlayImg = document.createElement('img');
+overlay.appendChild(overlayImg);
+document.body.appendChild(overlay);
+
+document.querySelectorAll('.img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlay.classList.add('active');
+    });
+});
+
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        overlay.classList.remove('active');
+    }
 });

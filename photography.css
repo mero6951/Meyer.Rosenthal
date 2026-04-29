@@ -1,0 +1,208 @@
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: stretch; /* changed from center */
+
+    grid-template-areas: 
+        "A A A A"
+        "B B C C"
+        "D D C C"
+        "G G E E"
+        "G G F F"
+        "H H H J"
+        "H H H K"
+        "H H H L"
+        "I I I I ";
+}
+.img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img:hover{
+    transition: transform 0.5s ease;
+    transform: scale(1.02);
+}
+
+#A { grid-area: A; }
+#B { grid-area: B; }
+#C { grid-area: C; }
+#D { grid-area: D; }
+#E { grid-area: E; }
+#F { grid-area: F; }
+#G { grid-area: G; }
+#H { grid-area: H; }
+#I { grid-area: I; }
+#J { grid-area: J; }
+#K { grid-area: K; }
+#L { grid-area: L; }
+
+.Pbody {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: whitesmoke;
+}
+/*======================================================================*/
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px; /* so content doesn't hide under fixed nav */
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+.navigation {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.navN {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+nav a:hover {
+    color: orange;
+}
+/*======================================================================*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 20px 20px 30px;
+    z-index: 2;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    font-size: 50px;
+    margin: 0 10px;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+
+footer a:hover{
+    color: orange;
+}
+
+#name{
+    font-size: 3vh;
+}
+#subtext{
+    font-size: 2vh;
+}
+
+/*======================================================================*/
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.overlay.active {
+    background: rgba(0, 0, 0, 0.75);
+    pointer-events: all;
+}
+
+.overlay img {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    transform: scale(0.85);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay.active img {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navigation {
+        padding: 10px 15px;
+    }
+
+    .navN {
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    footer a {
+        font-size: 6vw;
+        margin-right: 2vw;
+    }
+
+    #name {
+        font-size: 2vw;
+    }
+
+    #subtext {
+        font-size: 1.5vw;
+    }
+}

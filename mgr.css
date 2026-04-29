@@ -37,7 +37,7 @@ header {
 }
 
 #downArrow {
-    position: absolute;
+    position: fixed;
     bottom: 3vh;
     left: 50%;
     transform: translateX(-50%);
@@ -399,6 +399,15 @@ padding-top: 3vw;
     height: 200px;
     width: auto;
 }
+
+.projectHome {
+    flex-direction: row;
+}
+
+.projectHome:nth-child(even) {
+    flex-direction: row;
+}
+
 /*=============================================================================*/
 
 
