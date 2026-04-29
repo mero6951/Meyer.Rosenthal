@@ -1,2 +1,0 @@
-# Meyer.Rosenthal
-personal website
