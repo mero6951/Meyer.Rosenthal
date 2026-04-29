@@ -304,8 +304,102 @@ footer a:hover{
     font-size: 2vh;
 }
 
+/*======================================================================*/
+.project {
+    display: flex;
+    align-items: center;
+    padding: 60px 5vw;
+    gap: 5vw;
+    border-bottom: 1px solid #e0e0e0;
+}
 
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
 
+.project h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.project p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}
+
+.projectPhoto {
+    width: 45vw;
+    max-width: 500px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.projectPhoto {
+    position: relative;
+    width: 45vw;
+    max-width: 500px;
+    height: 350px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.projImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.projectContainer{
+padding-top: 3vw;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.85);
+    color: orange;
+}
+
+#ruo {
+    aspect-ratio: 4.5 / 3;
+    height: auto;
+}
+
+#poster {
+    aspect-ratio: 3 / 4;
+    height: 400px;
+    width: auto;
+}
+
+#bhf {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+#bhf .projImg {
+    object-fit: contain;
+}
+
+#pp{
+    aspect-ratio: 1.15 / 1;
+    height: 200px;
+    width: auto;
+}
+/*=============================================================================*/
 
 
 
@@ -340,5 +434,21 @@ footer a:hover{
 
     #subtext {
         font-size: 1.5vw;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .projectPhoto {
+    order: 2;
+    }
+
+    .projectText {
+        order: 1;
     }
 }
