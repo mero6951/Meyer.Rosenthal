@@ -50,6 +50,14 @@
     overflow-x: hidden;
     background-color: whitesmoke;
 }
+
+
+
+
+
+
+
+
 /*======================================================================*/
 body {
     margin: 0;
@@ -167,6 +175,16 @@ footer a:hover{
 }
 
 
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .navigation {
         padding: 10px 15px;
@@ -203,5 +221,23 @@ footer a:hover{
 
     #subtext {
         font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .photoStrip {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .photoTrack {
+        pointer-events: none;
+        transform: none !important;
+    }
+
+    .photoSlide {
+        width: 70vw;
+        max-width: 70vw;
+        margin: 0 2vw;
     }
 }
