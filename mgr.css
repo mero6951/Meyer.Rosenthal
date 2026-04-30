@@ -463,8 +463,11 @@ padding-top: 3vw;
     .mainNav {
         padding: 10px 15px;
     }
+    .navigation {
+        padding: 10px 15px;
+    }
 
-    .navName {
+    .navN {
         font-size: 0.85rem;
     }
 
