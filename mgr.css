@@ -480,4 +480,22 @@ padding-top: 3vw;
     .navN {
         font-size: 0.85rem;
     }
+}
+
+@media (max-width: 480px) {
+    .photoStrip {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
     }
+
+    .photoTrack {
+        pointer-events: none;
+        transform: none !important;
+    }
+
+    .photoSlide {
+        width: 70vw;
+        max-width: 70vw;
+        margin: 0 2vw;
+    }
+}
