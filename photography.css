@@ -1,49 +1,3 @@
-.photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 30px;
-    padding: 30px;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: stretch;
-
-    grid-template-areas: 
-        "A A A A"
-        "B B C C"
-        "D D C C"
-        "G G E E"
-        "G G F F"
-        "H H H J"
-        "H H H K"
-        "H H H L"
-        "I I I I ";
-}
-.img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.img:hover{
-    transition: transform 0.5s ease;
-    transform: scale(1.02);
-}
-
-#A { grid-area: A; }
-#B { grid-area: B; }
-#C { grid-area: C; }
-#D { grid-area: D; }
-#E { grid-area: E; }
-#F { grid-area: F; }
-#G { grid-area: G; }
-#H { grid-area: H; }
-#I { grid-area: I; }
-#J { grid-area: J; }
-#K { grid-area: K; }
-#L { grid-area: L; }
-
 .Pbody {
     margin: 0;
     padding: 0;
@@ -51,14 +5,6 @@
     background-color: whitesmoke;
 }
 
-
-
-
-
-
-
-
-/*======================================================================*/
 body {
     margin: 0;
     padding: 0;
@@ -108,7 +54,45 @@ nav a {
 nav a:hover {
     color: orange;
 }
+
+
 /*======================================================================*/
+
+.photos {
+    position: relative;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.photos:first-of-type {
+    margin-top: 30px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    break-inside: avoid;
+}
+
+.img:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.02);
+}
+
+.bar {
+    width: calc(100% - 80px);
+    height: 2px;
+    background-color: black;
+    margin: 30px auto;
+}
+
+/*======================================================================*/
+
 footer {
     background-color: black;
     color: white;
@@ -129,14 +113,15 @@ footer a {
     margin-right: 1vw;
 }
 
-footer a:hover{
+footer a:hover {
     color: orange;
 }
 
-#name{
+#name {
     font-size: 3vh;
 }
-#subtext{
+
+#subtext {
     font-size: 2vh;
 }
 
@@ -174,16 +159,7 @@ footer a:hover{
     opacity: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
+/*======================================================================*/
 
 @media (max-width: 768px) {
     .navigation {
@@ -222,22 +198,16 @@ footer a:hover{
     #subtext {
         font-size: 1.5vw;
     }
+
+    .photos {
+        columns: unset;
+        padding: 15px 20px;
+    }
 }
 
 @media (max-width: 480px) {
-    .photoStrip {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .photoTrack {
-        pointer-events: none;
-        transform: none !important;
-    }
-
-    .photoSlide {
-        width: 70vw;
-        max-width: 70vw;
-        margin: 0 2vw;
+    .photos {
+        columns: unset;
+        padding: 10px 15px;
     }
 }
