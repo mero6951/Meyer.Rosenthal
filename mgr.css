@@ -411,7 +411,6 @@ padding-top: 3vw;
 }
 
 /*=============================================================================*/
-
 @media (max-width: 768px) {
     .info {
         flex-direction: column;
@@ -451,10 +450,34 @@ padding-top: 3vw;
     }
 
     .projectPhoto {
-    order: 2;
+        order: 2;
     }
 
     .projectText {
         order: 1;
     }
-}
+
+    .mainNav {
+        padding: 10px 15px;
+    }
+
+    .navName {
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .navigation {
+    padding: 10px 15px;
+    }
+
+    .navN {
+        font-size: 0.85rem;
+    }
+    }
