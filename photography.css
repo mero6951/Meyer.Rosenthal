@@ -7,7 +7,7 @@
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
-    align-items: stretch; /* changed from center */
+    align-items: stretch;
 
     grid-template-areas: 
         "A A A A"
@@ -54,7 +54,7 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: 40px; /* so content doesn't hide under fixed nav */
+    padding-top: 40px;
     background-color: whitesmoke;
     overflow-x: hidden;
 }
@@ -167,8 +167,6 @@ footer a:hover{
 }
 
 
-
-
 @media (max-width: 768px) {
     .navigation {
         padding: 10px 15px;
@@ -204,5 +202,21 @@ footer a:hover{
 
     #subtext {
         font-size: 1.5vw;
+    }
+
+    .mainNav {
+        padding: 10px 15px;
+    }
+
+    .navName {
+        font-size: 0.85rem;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    nav ul {
+        gap: 10px;
     }
 }
