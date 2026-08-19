@@ -482,3 +482,98 @@ padding-top: 3vw;
     }
 }
 
+/*======================================================================
+   RESUME PAGE
+======================================================================*/
+
+.resumePanel {
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0 50px;
+    box-sizing: border-box;
+}
+
+.resumeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.resumeHeader h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.downloadBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 12px 22px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.downloadBtn:hover {
+    background-color: orange;
+    color: black;
+}
+
+.pdfWrapper {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+.pdfEmbed {
+    width: 100%;
+    height: 85vh;
+    display: block;
+    border: none;
+}
+
+/*--------- Responsive ---------*/
+
+@media (max-width: 768px) {
+    .resumePanel {
+        width: 100%;
+        padding: 90px 20px 30px;
+    }
+
+    .resumeHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .downloadBtn {
+        font-size: 0.85rem;
+        padding: 10px 18px;
+    }
+
+    .pdfEmbed {
+        height: 65vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .resumePanel {
+        padding: 85px 15px 20px;
+    }
+
+    .pdfEmbed {
+        height: 55vh;
+    }
+}

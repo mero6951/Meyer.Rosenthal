@@ -1,47 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Resume - Your Name</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mgr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Resume - Meyer Rosenthal</title>
 </head>
 <body>
 
-  <div class="navigation">
-    <div class="navN">YOUR NAME</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="navigation">
+        <span class="navN"><strong>Meyer Rosenthal</strong></span>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Photography.html">Photography</a></li>
+        </ul>
     </nav>
-  </div>
 
-  <section class="resume-section">
-    <div class="resume-header">
-      <h1>Resume</h1>
-      <a href="assets/resume.pdf" download class="download-btn">Download PDF</a>
+    <div class="resumePanel">
+        <div class="resumeHeader">
+            <h1>Resume</h1>
+            <a href="resume.pdf" download class="downloadBtn">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </a>
+        </div>
+
+        <div class="pdfWrapper">
+    <embed src="resume.pdf#toolbar=0&navpanes=0&view=FitH" type="application/pdf" class="pdfEmbed" />
+</div>
     </div>
 
-    <div class="pdf-wrapper">
-      <embed src="assets/resume.pdf" type="application/pdf" class="pdf-embed" />
-    </div>
-  </section>
-
-  <div class="bar"></div>
-
-  <footer>
-    <div>
-      <div id="name">Your Name</div>
-      <div id="subtext">Your Tagline Here</div>
-    </div>
-    <div>
-      <a href="mailto:you@email.com">✉</a>
-      <a href="https://linkedin.com/in/you">in</a>
-    </div>
-  </footer>
-
+    <footer>
+        <p id="subtext"><strong id="name">Meyer Rosenthal</strong> <br>University of Colorado Boulder <br>College of Engineering, Creative Technology and Design (Major)</p>
+        <div class="logos">
+            <a href="mailto:meyer@rosenthalhome.net" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/meyer-rosenthal-73809a337/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/fishrose_productions/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
