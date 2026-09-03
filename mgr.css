@@ -192,35 +192,32 @@ nav a:hover {
 .photoStrip {
     position: relative;
     width: 100%;
-    height: auto;
     overflow: hidden;
     background: #ffffff;
     display: flex;
     align-items: center;
-    padding: 3vw 0;
+    padding: 3vw;
     box-sizing: border-box;
 }
 
 .photoTrack {
     display: flex;
-    height: 100%;
-    width: max-content;
+    width: 100%;
     align-items: center;
-    padding-left: 1vw;
+    justify-content: center;
+    gap: 1vw;
+    flex-wrap: nowrap;
 }
 
 .photoSlide {
-    width: 40vw;
+    flex: 1 1 0;
+    min-width: 0;
     max-width: 400px;
     height: auto;
     aspect-ratio: 4 / 3;
-    flex-shrink: 0;
-    align-self: center;
-    margin: 0 0.5vw;
     border-radius: 6px;
     object-fit: cover;
 }
-
 .photoTitle{
     text-decoration: none;
     color: rgb(0, 0, 0);
