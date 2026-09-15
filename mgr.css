@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     overflow-y: scroll;
 }
+
 .homepage {
     background-image: url("images/mtnzzz.jpg");
     height: 100vh;
@@ -218,6 +219,7 @@ nav a:hover {
     border-radius: 6px;
     object-fit: cover;
 }
+
 .photoTitle{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -305,16 +307,40 @@ footer a:hover{
 
 /*======================================================================*/
 .project {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 60px 5vw;
+    padding: 55px 5vw;
     gap: 5vw;
-    border-bottom: 1px solid #e0e0e0;
+    z-index: 0;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    bottom: -18px;
+    left: -10%;
+    right: -10%;
+    z-index: -1;
 }
 
 .project:nth-child(even) {
     flex-direction: row-reverse;
 }
+
+.project:nth-child(odd)::before {
+    background-color: #eeeeee;
+    transform: skewY(-0.6deg) translateY(2px) translateZ(0);
+    box-shadow: inset 0 10px 10px -8px rgba(0, 0, 0, 0.3);
+}
+
+.project:nth-child(even)::before {
+    background-color: #cfcfcf;
+    transform: skewY(0.6deg) translateY(-2px) translateZ(0);
+    box-shadow: inset 0 10px 10px -8px rgba(0, 0, 0, 0.35);
+}
+
 
 .project h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -366,6 +392,8 @@ footer a:hover{
 
 .projectContainer{
 padding-top: 3vw;
+overflow-x: hidden;
+overflow-y: hidden;
 }
 
 .prev:hover, .next:hover {
@@ -405,6 +433,7 @@ padding-top: 3vw;
 
 .projectHome:nth-child(even) {
     flex-direction: row;
+    background-color: transparent;
 }
 
 /*=============================================================================*/
