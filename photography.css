@@ -332,3 +332,13 @@ footer a:hover {
     border-bottom: 2px solid orange;
     color: rgb(255, 136, 0);
 }
+
+
+
+.sectionGroup {
+    display: none;
+}
+
+#section1 {
+    display: block;
+}

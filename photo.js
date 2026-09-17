@@ -74,8 +74,8 @@ function buildMasonry(grid) {
     function placeImage(img, colWidth, colHeights, colLastImg) {
         const natural = (img.naturalWidth && img.naturalHeight) ? img.naturalWidth / img.naturalHeight : 1.5;
 
-        if (img.id === 'a') return placeWide(img, 2, colWidth, colHeights, colLastImg);
-        if (img.id === 'b') return placeWide(img, 3, colWidth, colHeights, colLastImg);
+        const span = parseInt(img.dataset.span);
+        if (span > 1) return placeWide(img, span, colWidth, colHeights, colLastImg);
         if (natural >= WIDE_RATIO && COLS > 1) return placeWide(img, 2, colWidth, colHeights, colLastImg);
 
         const col = shortestCol(colHeights);
@@ -117,7 +117,7 @@ function buildMasonry(grid) {
         const colLastImg = Array(COLS).fill(null);
 
         imgs.forEach(img => placeImage(img, colWidth, colHeights, colLastImg));
-        equalizeBottoms(colHeights, colLastImg);
+        //equalizeBottoms(colHeights, colLastImg);
         grid.style.height = Math.max(...colHeights) + 'px';
     }
 
