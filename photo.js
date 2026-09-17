@@ -174,3 +174,22 @@ window.addEventListener('resize', () => {
         if (grid._masonryRun) grid._masonryRun();
     });
 });
+
+
+
+document.querySelectorAll('.sectionLink').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.dataset.target;
+
+        document.querySelectorAll('.sectionLink').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+
+        document.querySelectorAll('.sectionGroup').forEach(group => {
+            group.style.display = group.id === targetId ? 'block' : 'none';
+        });
+
+        const targetGrid = document.querySelector(`#${targetId} .photos`);
+        if (targetGrid) buildMasonry(targetGrid);
+    });
+});
