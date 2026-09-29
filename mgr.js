@@ -34,4 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    downArrow.addEventListener('click', () => {
+        panel.scrollIntoView({ behavior: 'smooth' });
+    });
+    
 });
