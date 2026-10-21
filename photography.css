@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 .img:hover {
-    transition: transform 0.5s ease;
+    transition: transform 0.75s ease;
     transform: scale(1.02);
 }
 

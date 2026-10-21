@@ -29,7 +29,7 @@ function buildMasonry(grid) {
         img.style.width = '1px';
         img.style.height = '1px';
         img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
+        img.style.transition = 'opacity 0.3s ease, transform 0.75s ease';
     });
 
     function shortestCol(colHeights) {
